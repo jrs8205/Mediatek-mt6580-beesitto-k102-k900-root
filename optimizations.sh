@@ -89,3 +89,13 @@ resetprop dalvik.vm.heapstartsize 8m
 # Disable MTK logger if not already disabled
 resetprop persist.sys.mtklog.no_ui 1
 resetprop persist.sys.mtklog.filter 0
+
+# -------------------------------------------------------------
+# 6. Touch Responsiveness & Scrolling Tweaks
+# -------------------------------------------------------------
+# Reduce scroll friction for smoother and longer scrolling inertia
+resetprop view.scroll_friction 0.008
+# Reduce touch slop (pixels moved before drag starts) from default 8 to 4 for instant reaction
+resetprop view.touch_slop 4
+# Set pointer speed to slightly faster (range -7 to 7, default 0)
+settings put system pointer_speed 3
